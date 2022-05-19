@@ -60,5 +60,11 @@ public class mRepository {
     public mDto findid(mDto mem){
         return sql.selectOne("data.findid",mem);
     }
+    public int del(mDto mmm){
+        return sql.delete("data.del",mmm);
+    }
 
+    public void update(mDto mmm) {
+        sql.update("data.update",mmm);
+    }
 }

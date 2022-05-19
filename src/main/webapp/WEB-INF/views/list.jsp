@@ -12,9 +12,12 @@
     <title>Title</title>
 </head>
 <body>
+<h1>전체회원 정보</h1>
 <c:forEach var="tdto" items="${findlist}">
     ${tdto}
     <a href="/detail?id=${tdto.id}">조회</a>
+    <a href="/detail-d?id=${tdto.id}">삭제하기</a>
+    <a href="/detail-up?id=${tdto.id}">정보수정</a>
     <br><br>
 </c:forEach>
 

@@ -39,6 +39,13 @@ public class mService {
     public mDto findid(mDto mem){
        return mr.findid(mem);
     }
-
+    public int del(mDto mmm){
+       return mr.del(mmm);
     }
+
+
+    public void update(mDto mmm) {
+       mr.update(mmm);
+    }
+}
 

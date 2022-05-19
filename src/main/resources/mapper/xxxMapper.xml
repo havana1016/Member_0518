@@ -20,6 +20,12 @@
     <select id="findid" resultType="mem">
         select * from member_table where id=#{id}
     </select>
+    <delete id="del" >
+        delete from member_table where id=#{id}
+    </delete>
+    <update id="update" parameterType="mem">
+        update member_table set mid=#{mid},mpw=#{mpw},mname=#{mname},mage=#{mage},mnum=#{mnum} where id=#{id}
+    </update>
 
 </mapper>
 

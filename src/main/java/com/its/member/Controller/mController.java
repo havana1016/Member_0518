@@ -103,5 +103,28 @@ public class mController {
         session.setAttribute("findmem", ms.findid(mmm));
         return("detail");
     }
+    @GetMapping("/detail-d")
+    String detaild(@RequestParam("id")int fid,HttpSession session,Model model){
+        mDto mmm=new mDto();
+        mmm.setId(fid);
+        if(ms.del(mmm)>0){
+            List<mDto>findlist=ms.find();
+            model.addAttribute("findlist",findlist);
+            return ("list");
+        }else{
+            return null;
+        }
+    }
+
+    @GetMapping("/detail-up")
+    String update(@RequestParam("id")int fid,HttpSession session,Model model){
+
+        mDto mmm=new mDto();
+        mmm.setId(fid);
+        session.setAttribute("upmem",ms.findid(mmm));
+
+        return "update";
+
+    }
 
 }
