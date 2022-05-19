@@ -14,6 +14,12 @@
     <select id="find" resultType="mem">
         select * from member_table
     </select>
+    <select id="idc" resultType="mem">
+        select * from member_table where mid=#{mid}
+    </select>
+    <select id="findid" resultType="mem">
+        select * from member_table where id=#{id}
+    </select>
 
 </mapper>
 

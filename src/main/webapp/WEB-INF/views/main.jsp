@@ -12,5 +12,11 @@
 </head>
 <body>
 <h1>메인페이지</h1>
+로그인 회원 정보 : ${logmem};
+세션에 담은 memlogid : ${sessionScope.logmemid};
+세션에 담은 id : ${sessionScope.logid};
+
+
+<a href="/">인덱스로 이동</a>
 </body>
 </html>

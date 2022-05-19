@@ -4,6 +4,7 @@ import com.its.member.Dto.mDto;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public class mRepository {
 
     public boolean login(mDto mem){
         mDto result= sql.selectOne ("data.login",mem);
+
         if(result!=null){
             System.out.println("성공");
             return true;
@@ -50,4 +52,13 @@ public class mRepository {
 //            System.out.println("정보 다름");
 //        }
 //    }
+    public mDto idc(mDto mem){
+       return sql.selectOne("data.idc",mem);
+
+    }
+
+    public mDto findid(mDto mem){
+        return sql.selectOne("data.findid",mem);
+    }
+
 }

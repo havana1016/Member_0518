@@ -13,7 +13,12 @@ String mpw;
 String mname;
 int mage;
 String mnum;
-public mDto(String mid,String mpw,String mname,int mage,String mnum){
+
+    public mDto(String mid) {
+        this.mid = mid;
+    }
+
+    public mDto(String mid, String mpw, String mname, int mage, String mnum){
 
     this.mid=mid;
     this.mpw=mpw;

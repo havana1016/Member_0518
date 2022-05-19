@@ -32,7 +32,13 @@ public class mService {
         return findlist;
     }
 
+    public mDto idc(mDto mem){
+          return mr.idc(mem);
+    }
 
+    public mDto findid(mDto mem){
+       return mr.findid(mem);
+    }
 
     }
 

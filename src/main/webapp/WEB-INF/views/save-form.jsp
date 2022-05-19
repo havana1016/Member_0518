@@ -10,9 +10,11 @@
 <head>
     <title>Title</title>
     <script>
-        function result(){
-            let gid=document.getElementById("gid").value;
-            
+        function idcresult(){
+            let val=document.getElementById("gid").value;
+            let idcdiv=document.getElementById(idcdiv)
+            console.log(val);
+
         }
     </script>
 
@@ -21,8 +23,8 @@
 <body>
 <form action="save" method="post">
     <br>
-    <input type="text" name="mid" id="gid" placeholder="아이디를 입력하세요."><br>
-    <button onclick="result()">아이디 중복체크</button>
+    <input type="text" name="mid" id="gid" placeholder="아이디를 입력하세요." value="${ttt.mid}" ><br>
+    <button onclick="javascript: form.action='/idc';">아이디 중복확인</button><br>
     <input type="text" name="mpw" placeholder="비밀번호를 입력하세요."><br>
     <input type="text" name="mname" placeholder="이름을 입력하세요."><br>
     <input type="text" name="mage" placeholder="나이를 입력하세요."><br>

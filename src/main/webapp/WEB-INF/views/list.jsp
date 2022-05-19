@@ -13,7 +13,12 @@
 </head>
 <body>
 <c:forEach var="tdto" items="${findlist}">
-    ${tdto}<br><br>
+    ${tdto}
+    <a href="/detail?id=${tdto.id}">조회</a>
+    <br><br>
 </c:forEach>
+
+
+
 </body>
 </html>
