@@ -11,23 +11,17 @@
     <title>Title</title>
 </head>
 <body>
-<h3>수정하실 정보를 입력해주세요.</h3>
-<form action="update" method="get">
-<p id="mid" >현재 아이디 ${upmem.mid}</p>
-<input type="text" name="mid" placeholder="수정하실 아이디 입력">
-    <p id="mpw" value="${upmem.mpw}"></p>
-    <input type="text" name="mpw" placeholder="수정하실 비밀번호 입력">
-    <p id="mname" value="${upmem.mname}"></p>
-    <input type="text" name="mname" placeholder="수정하실 이름 입력">
-    <p id="mage" value="${upmem.mage}"></p>
-    <input type="text" name="mage" placeholder="수정하실 나이 입력">
-    <p id="mnum" value="${upmem.mnum}"></p>
-    <input type="text" name="mnum" placeholder="수정하실 연락처 입력">
-    <input type="submit" placeholder="수정하기">
+${sessionScope.logmem}
+현재 관리번호 : ${sessionScope.logid}<br>
 
-
-
+현재 연락처 : ${sessionScope.logmem.mnum}<br>
+<form action="upnum?id=${sessionScope.logid}" method="get">
+<input type="text" name="mnum" placeholder="변경할 연락처 입력">
+<%--<a href="/upnum?id=${sessionScope.logid}&mnum=${mnum}">수정하기</a>--%>
+<input type="submit" value="수정하기">
 </form>
+
+
 
 
 </body>

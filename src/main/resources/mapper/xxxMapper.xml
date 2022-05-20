@@ -27,6 +27,10 @@
         update member_table set mid=#{mid},mpw=#{mpw},mname=#{mname},mage=#{mage},mnum=#{mnum} where id=#{id}
     </update>
 
+    <update id="upmnum" parameterType="mem">
+        update member_table set mnum=#{mnum} where id=#{id}
+    </update>
+
 </mapper>
 
 

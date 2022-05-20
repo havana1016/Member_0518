@@ -24,7 +24,7 @@ public class mService {
 //        public void login(mDto mem){
 //            mr.login(mem);
 //        }
-    public boolean login(mDto mem){
+    public mDto login(mDto mem){
         return mr.login(mem);}
 
     public List<mDto> find(){
@@ -32,7 +32,7 @@ public class mService {
         return findlist;
     }
 
-    public mDto idc(mDto mem){
+    public String idc(mDto mem){
           return mr.idc(mem);
     }
 
@@ -46,6 +46,11 @@ public class mService {
 
     public void update(mDto mmm) {
        mr.update(mmm);
+    }
+
+
+    public int upnum(mDto upmem) {
+      return mr.upnum(upmem);
     }
 }
 

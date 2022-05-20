@@ -12,5 +12,17 @@
 </head>
 <body>
 <h1>테스트페이지</h1>
+<table style="border: 1px solid">
+    <tr>
+        <th>th1</th>
+        <th>th1</th>
+        <th>th1</th>
+    </tr>
+    <tr>
+        <td>td1</td>
+        <td>td2</td>
+        <td>td3</td>
+    </tr>
+</table>
 </body>
 </html>

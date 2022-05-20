@@ -18,16 +18,16 @@ public class mRepository {
     }
 
 
-    public boolean login(mDto mem){
-        mDto result= sql.selectOne ("data.login",mem);
+    public mDto login(mDto mem){
+        return sql.selectOne ("data.login",mem);
 
-        if(result!=null){
-            System.out.println("성공");
-            return true;
-        }else {
-            System.out.println("정보 다름");
-            return false;
-        }
+//        if(result!=null){
+//            System.out.println("성공");
+//            return true;
+//        }else {
+//            System.out.println("정보 다름");
+//            return false;
+//        }
 
     }
 
@@ -52,8 +52,12 @@ public class mRepository {
 //            System.out.println("정보 다름");
 //        }
 //    }
-    public mDto idc(mDto mem){
-       return sql.selectOne("data.idc",mem);
+    public String idc(mDto mem){
+       if(sql.selectOne("data.idc",mem)==null){
+           return "ok";
+       }else{
+           return "no";
+       }
 
     }
 
@@ -66,5 +70,12 @@ public class mRepository {
 
     public void update(mDto mmm) {
         sql.update("data.update",mmm);
+    }
+
+
+    public int upnum(mDto upmem) {
+        int up= sql.update("data.upmnum",upmem);
+        System.out.println(up);
+        return up;
     }
 }

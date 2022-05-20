@@ -9,14 +9,17 @@
 <html>
 <head>
     <title>Title</title>
+    <script>
+    function upform(){
+        location.href='update-form'
+    }
+    </script>
 </head>
 <body>
 <h1>메인페이지</h1>
-로그인 회원 정보 : ${logmem};
-세션에 담은 memlogid : ${sessionScope.logmemid};
-세션에 담은 id : ${sessionScope.logid};
 
-
+ ${sessionScope.logmem};
+<button onclick="upform()">정보수정</button>
 <a href="/">인덱스로 이동</a>
 </body>
 </html>
