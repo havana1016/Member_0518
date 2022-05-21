@@ -7,12 +7,12 @@ import lombok.*;
 @Setter
 
 public class mDto {
-    int id;
-    String mid;
-String mpw;
-String mname;
-int mage;
-String mnum;
+   public int id;
+    public String mid;
+public String mpw;
+public String mname;
+public int mage;
+public String mnum;
 
     public mDto(String mid) {
         this.mid = mid;

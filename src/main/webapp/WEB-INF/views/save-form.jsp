@@ -22,8 +22,8 @@
 <form class="form-control" action="save" method="post">
 
     <br>
-    <input class="form-control" type="text" name="mid" id="mid" onblur="idc()" placeholder="아이디를 입력하세요." value="${ttt.mid}" ><br>
-    <span id="idcresult"></span>
+    <input class="form-control" type="text" name="mid" id="mid" onblur="idc()" placeholder="아이디를 입력하세요." value="${ttt.mid}" >
+    <div id="idcresult"></div>
 <%--    <button onclick="javascript: form.action='/idc';">아이디 중복확인</button><br>--%>
     <input class="form-control" type="text" name="mpw" placeholder="비밀번호를 입력하세요."><br>
     <input class="form-control" type="text" name="mname" placeholder="이름을 입력하세요."><br>
@@ -36,7 +36,7 @@
 <script>
     function idc(){
         console.log("idc호출")
-        const midv=document.getElementById("mid").value;
+        const midv=mid.value;
         const mid=document.getElementById("mid");
         const idcresult=document.getElementById("idcresult");
         $.ajax({

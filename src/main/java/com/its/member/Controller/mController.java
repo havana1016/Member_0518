@@ -184,4 +184,19 @@ public class mController {
     String test(){
         return "test";
     }
+
+    @PostMapping ("/logc")
+    public @ResponseBody mDto logc(@RequestParam("mid")String mid,@RequestParam("mpw")String mpw,HttpSession session){
+        System.out.println(mid+""+mpw);
+        mDto mem=new mDto(mid,mpw);
+        mDto logmem=ms.login(mem);
+        session.setAttribute("logmem",logmem);
+        session.setAttribute("logid",logmem.id);
+        return logmem;
+
+    }
+    @GetMapping("/main")
+    String main(){
+        return "main";
+    }
 }

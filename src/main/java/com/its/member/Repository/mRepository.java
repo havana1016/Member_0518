@@ -19,7 +19,9 @@ public class mRepository {
 
 
     public mDto login(mDto mem){
-        return sql.selectOne ("data.login",mem);
+        mDto result=sql.selectOne ("data.login",mem);
+        System.out.println("repository : "+result);
+        return result ;
 
 //        if(result!=null){
 //            System.out.println("성공");
